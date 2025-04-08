@@ -1,5 +1,5 @@
 version: "1"
 rules:
   - base: master
-    upstream: Koenkk:master # change `wei` to the owner of upstream repo
+    upstream: hassio-zigbee2mqtt:master # change `wei` to the owner of upstream repo
     mergeMethod: hardreset
