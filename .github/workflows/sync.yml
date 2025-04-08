@@ -15,7 +15,7 @@ jobs:
         uses: dabreadman/sync-upstream-repo@v1.3.0
         with: 
           upstream_repo: https://github.com/zigbee2mqtt/hassio-zigbee2mqtt
-          upstream_branch: master
+          upstream_branch: main
           downstream_branch: master
           token: ${{ secrets.GITHUB_TOKEN }}
           
