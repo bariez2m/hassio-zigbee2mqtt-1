@@ -17,4 +17,4 @@ jobs:
           upstream_repo: https://github.com/zigbee2mqtt/hassio-zigbee2mqtt # change this
           upstream_branch: master # change this
           downstream_branch: master # change this
-          token: ${{ secrets.PAT_TOKEN }}
+          token: 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
