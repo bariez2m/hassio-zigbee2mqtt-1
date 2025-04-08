@@ -1,20 +1,17 @@
-name: Sync Upstream
+name: CI
 
-# This runs every day on 1801 UTC
-on:
+on: 
   schedule:
-    - cron: '1 18 * * *'
-  # Allows manual workflow run (must in default branch to work)
-  workflow_dispatch:
-
+    - cron: "15 14 * * *"
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: GitHub Sync to Upstream Repository
-        uses: Andrey1994/sync-upstream-repo@0.0.2
-        with: 
-          upstream_repo: https://github.com/zigbee2mqtt/hassio-zigbee2mqtt # change this
-          upstream_branch: master # change this
-          downstream_branch: master # change this
-          token: ${{ secrets.PAT_TOKEN }}
+    - uses: actions/checkout@v1
+    - name: GitHub Sync to Upstream Repository
+      uses: mheene/sync-upstream-repo@v0.1.2
+      with:
+      # GitHub public upstream repo
+        upstream_repo: https://github.com/zigbee2mqtt/hassio-zigbee2mqtt.git
